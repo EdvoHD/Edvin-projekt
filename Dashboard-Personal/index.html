@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu|Source+Sans+Pro" rel="stylesheet">
+    <title>DASHBOARD-PERSONAL</title>
+  </head>
+  <body>
+    <div class="wrapper">
+
+        <div class="gridbox-1">
+          <div class="box1-content1">
+            <div class="time-date" id="time">
+              <h1>15:05</h1>
+              <p>FRIDAY, 13 May 2018</p>
+              <!-- <hr> -->
+            </div>
+          </div>
+
+          <div class="box1-content2">
+            <div class="reminder">
+              <i class="fas fa-stopwatch"> Reminder</i>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              </div>
+
+
+          </div>
+
+        </div> <!-- </> gridbox-1 -->
+
+        <div class="gridbox-2">
+          <div class="box2-content">1</div>
+          <div class="box2-content">2</div>
+          <div class="box2-content">3</div>
+          <div class="box2-content">4</div>
+        </div>
+
+    </div>
+    <script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+  </body>
+</html>

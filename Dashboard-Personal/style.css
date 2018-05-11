@@ -1,0 +1,102 @@
+/* DASHBOARD PERSONAL Edvin Aginger */
+/* Optimala versionen = då man kan droppa content vart som helst och resizea den med hjälp av grids för att bestämma exakt. */
+/* Budget versionen = Rutor har en viss storlek och man kan droppa in content i de olika rutorna. */
+
+html, body{
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+/* Färg schema
+#ffffff
+#0ca7d2
+#0785a9
+#035a73
+#034d61
+*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "gridbox-1 gridbox-1 gridbox-1"
+  "gridbox-1 gridbox-1 gridbox-1" /* för att "reminder" diven ska kunna sticka ner som en bar på mobilversionen */
+  "gridbox-2 gridbox-2 gridbox-2"
+  "gridbox-2 gridbox-2 gridbox-2"
+  ;
+
+  /* styling */
+  text-align: center;
+  color: #ffffff;
+  background-color: #ffffff;
+/*  min-height: 100%; */
+  grid-gap: 50px;
+  border: solid 2px black;
+}
+
+
+.gridbox-1 {
+  grid-area: gridbox-1;
+  background-color: #0ca7d2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+}
+
+.gridbox-2 {
+  grid-area: gridbox-2;
+  background-color: #0785a9;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+}
+
+.box1-content1, .box1-content2, .box2-content {
+  border: dotted 2px darkred;
+}
+
+.box1-content1 {
+  padding-top: 10px;
+}
+
+.box1-content1 h1 {
+  font-size: 4em;
+  margin: 0;
+}
+
+.box1-content1 p {
+  color: #034d61;
+  font-weight: bold;
+  margin: 0;
+}
+
+.box1-content1 hr {
+  border: solid 2px #fff;
+  border-radius: 5px;
+}
+
+.box1-content2 {
+  display: grid;
+  grid-template: 1fr;
+}
+
+.reminder {
+max-height: 150px;
+overflow-x: hidden;
+overflow-y: scroll;
+list-style-type: none;
+}
+
+.reminder li {
+  display: block;
+  border: solid #034d61 2px;
+}
+
+
+
+@media only screen and (min-width: 768px) { /* =====DESKTOP===== */
+
+}
