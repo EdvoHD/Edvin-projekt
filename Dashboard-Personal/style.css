@@ -17,6 +17,12 @@ html, body{
 #034d61
 */
 
+/* FONTS
+font-family: 'Gugi', cursive;
+font-family: 'Black Han Sans', sans-serif;
+font-family 'Roboto' sans-serif;
+*/
+
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -33,8 +39,8 @@ html, body{
   color: #ffffff;
   background-color: #ffffff;
 /*  min-height: 100%; */
-  grid-gap: 50px;
-  border: solid 2px black;
+  /*border: solid 4px black; */
+  border-radius: 5px;
 }
 
 
@@ -43,23 +49,33 @@ html, body{
   background-color: #0ca7d2;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
 }
 
 .gridbox-2 {
   grid-area: gridbox-2;
-  background-color: #0785a9;
+  background-color: #fff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2px;
+  grid-gap: 5px;
+  border-top: 8px solid #034d61;
 }
 
-.box1-content1, .box1-content2, .box2-content {
-  border: dotted 2px darkred;
-}
+/* ===== INSIDE gridbox-1 ===== */
 
 .box1-content1 {
   padding-top: 10px;
+}
+
+.time {
+  font-size: 2.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.date {
+  color: #034d61;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 .box1-content1 h1 {
@@ -81,19 +97,106 @@ html, body{
 .box1-content2 {
   display: grid;
   grid-template: 1fr;
+  background-color: #0ca7d2;
 }
 
 .reminder {
-max-height: 150px;
-overflow-x: hidden;
-overflow-y: scroll;
-list-style-type: none;
+  line-height: 20px;
+  max-height: 160px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  list-style-type: none;
+  font-size: 1em;
+  text-align: center;
 }
 
 .reminder li {
-  display: block;
-  border: solid #034d61 2px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: #035a73;
+  box-shadow: 0px 0px 2px #034d61;
+  transition: all 0.2s;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
 }
+
+.reminder p {
+  text-align: left;
+}
+
+.reminder li:nth-child(odd) {
+  background-color: #0785a9;
+}
+
+.reminder li:hover {
+  transform: scale(1.05);
+}
+
+.reminder i {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* ==CUSTOM SCROLLBAR==  */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 10px;
+}
+/* */
+
+
+/* ======== INSIDE gridbox-2 ======== */
+
+.box2-content {
+  display: grid;
+  border:1px solid red;
+}
+
+.weather-bg {
+  min-height: 100px;
+  background-image: url('bilder/sunnyday1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.weather-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.weather-icon {
+  font-size: 2em;
+  padding-top: 5px;
+}
+
+.weather-day { /* ||||||||||||||||||||||||||||||göra en scroll lista med olika dagar|||||||||||||||||||||||||||||| */
+  background-color: #035a73;
+  opacity: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* */
+
+
 
 
 

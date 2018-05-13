@@ -8,52 +8,52 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu|Source+Sans+Pro" rel="stylesheet">
     <title>DASHBOARD-PERSONAL</title>
   </head>
-  <body>
+  <body onload="startTime()">
     <div class="wrapper">
 
         <div class="gridbox-1">
+
           <div class="box1-content1">
-            <div class="time-date" id="time">
-              <h1>15:05</h1>
-              <p>FRIDAY, 13 May 2018</p>
-              <!-- <hr> -->
-            </div>
+            <div class="time" id="time"></div>
+            <div class="date" id="date">hej</div>
+
+
+
           </div>
 
           <div class="box1-content2">
             <div class="reminder">
-              <i class="fas fa-stopwatch"> Reminder</i>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>6</li>
-              <li>7</li>
-              <li>8</li>
-              <li>9</li>
-              <li>10</li>
-              <li>11</li>
-              <li>12</li>
-              <li>13</li>
-              <li>14</li>
-              <li>15</li>
-              <li>16</li>
+              <li><i class="far fa-circle"></i> <p>Hämta tidningen innan klockan 4</p></li>
+              <li><i class="far fa-circle"></i> <p>Avokado</p></li>
+              <li><i class="far fa-circle"></i> <p>Gå ut med hunden</p></li>
+              <li><i class="far fa-circle"></i> <p>4</p></li>
+              <li><i class="far fa-circle"></i> <p>5</p></li>
+              <li><i class="far fa-circle"></i> <p>6</p></li>
+              <li><i class="far fa-circle"></i> <p>7</p></li>
               </div>
-
-
           </div>
-
         </div> <!-- </> gridbox-1 -->
 
         <div class="gridbox-2">
-          <div class="box2-content">1</div>
+
+          <div class="box2-content weather-bg">
+            <div class="weather-box">
+              <div class="weather-icon">
+                <i class="far fa-sun"></i>
+              </div>
+              <div class="weather-day">
+                2 2
+              </div>
+            </div>
+          </div>
+
           <div class="box2-content">2</div>
           <div class="box2-content">3</div>
           <div class="box2-content">4</div>
-        </div>
+        </div> <!-- </> grid-box-2 -->
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
 function startTime() {
     var today = new Date();
@@ -70,6 +70,11 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
+
+var d = new Date();
+document.getElementById("date").innerHTML = d;
+
+
 </script>
 
   </body>
