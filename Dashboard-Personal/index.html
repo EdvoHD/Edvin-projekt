@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu|Source+Sans+Pro" rel="stylesheet">
     <title>DASHBOARD-PERSONAL</title>
@@ -14,8 +15,8 @@
         <div class="gridbox-1">
 
           <div class="box1-content1">
-            <div class="time" id="time"></div>
-            <div class="date" id="date">hej</div>
+            <div class="time bold" id="time"></div>
+            <div class="date bold" id="date">hej</div>
 
 
 
@@ -23,26 +24,30 @@
 
           <div class="box1-content2">
             <div class="reminder">
-              <li><i class="far fa-circle"></i> <p>Hämta tidningen innan klockan 4</p></li>
-              <li><i class="far fa-circle"></i> <p>Avokado</p></li>
-              <li><i class="far fa-circle"></i> <p>Gå ut med hunden</p></li>
-              <li><i class="far fa-circle"></i> <p>4</p></li>
-              <li><i class="far fa-circle"></i> <p>5</p></li>
-              <li><i class="far fa-circle"></i> <p>6</p></li>
-              <li><i class="far fa-circle"></i> <p>7</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
               </div>
           </div>
         </div> <!-- </> gridbox-1 -->
 
         <div class="gridbox-2">
 
-          <div class="box2-content weather-bg">
+          <div class="box2-content">
             <div class="weather-box">
-              <div class="weather-icon">
-                <i class="far fa-sun"></i>
+
+              <div class="weather-now">
+                <p id="w-location">plats</p>
+                <h2>15°C</h2>
+                <i class="icon-size-large wi wi-night-sleet"></i>
+
               </div>
               <div class="weather-day">
-                2 2
+
               </div>
             </div>
           </div>
@@ -54,40 +59,7 @@
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    //tid
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('time').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-
-// datum
-
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-
-var yyyy = today.getFullYear();
-if(dd<10){
-    dd='0'+dd;
-}
-if(mm<10){
-    mm='0'+mm;
-}
-var today = dd+'/'+mm+'/'+yyyy;
-document.getElementById("date").value = today;
-</script>
-
+    
+    <script src="script.js"></script>
   </body>
 </html>

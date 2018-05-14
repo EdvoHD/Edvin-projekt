@@ -1,7 +1,7 @@
 /* DASHBOARD PERSONAL Edvin Aginger */
 /* Optimala versionen = då man kan droppa content vart som helst och resizea den med hjälp av grids för att bestämma exakt. */
 /* Budget versionen = Rutor har en viss storlek och man kan droppa in content i de olika rutorna. */
-
+/* Väder app https://medium.com/dailyjs/making-the-most-of-your-sphere-with-javascript-building-a-geolocation-based-weather-app-with-3df5ae1fcb27 */
 html, body{
   font-family: 'Source Sans Pro', sans-serif;
   height: 100%;
@@ -13,6 +13,7 @@ html, body{
 #ffffff
 #0ca7d2
 #0785a9
+#067494
 #035a73
 #034d61
 */
@@ -55,7 +56,8 @@ font-family 'Roboto' sans-serif;
   grid-area: gridbox-2;
   background-color: #fff;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
   grid-gap: 5px;
   border-top: 8px solid #034d61;
 }
@@ -64,19 +66,22 @@ font-family 'Roboto' sans-serif;
 
 .box1-content1 {
   padding-top: 10px;
+  min-height: 160px;
 }
 
 .time {
-  font-size: 2.5em;
+  font-size: 3em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .date {
   color: #034d61;
-  font-weight: bold;
+  font-size: 1.15em;
   margin: 0;
   text-transform: uppercase;
 }
+
+.bold { font-weight: bold;}
 
 .box1-content1 h1 {
   font-size: 4em;
@@ -139,6 +144,67 @@ font-family 'Roboto' sans-serif;
   margin-top: 20px;
 }
 
+
+
+/* ======== INSIDE gridbox-2 ======== */
+
+.box2-content {
+  display: grid;
+  border:1px solid red;
+  min-height: 240px;
+}
+
+.weather-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 50px;
+  background-color: #0ca7d2;
+}
+
+.weather-now {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "w-location w-location"
+  "w-temp w-icon";
+}
+
+.weather-now i {grid-area: w-icon;}
+
+.weather-now p {
+  grid-area: w-location;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+    margin: 0;
+
+}
+.weather-now h2 {
+  grid-area: w-temp;
+  font-size: 3em;
+  margin: 0;
+}
+
+.weather-day {
+  background-color: #035a73;
+  margin: 0 auto;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.weather-day li {
+  display: inline-block;
+}
+
+.icon-size-small {font-size: 1.2em;}
+.icon-size-medium {font-size: 1.5em;}
+.icon-size-large {font-size: 4em;}
+
+/* */
+
+
+
 /* ==CUSTOM SCROLLBAR==  */
 
 /* width */
@@ -158,44 +224,6 @@ font-family 'Roboto' sans-serif;
     border-radius: 10px;
 }
 /* */
-
-
-/* ======== INSIDE gridbox-2 ======== */
-
-.box2-content {
-  display: grid;
-  border:1px solid red;
-}
-
-.weather-bg {
-  min-height: 100px;
-  background-image: url('bilder/sunnyday1.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.weather-box {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.weather-icon {
-  font-size: 2em;
-  padding-top: 5px;
-}
-
-.weather-day { /* ||||||||||||||||||||||||||||||göra en scroll lista med olika dagar|||||||||||||||||||||||||||||| */
-  background-color: #035a73;
-  opacity: 1;
-  width: 80%;
-  margin: 0 auto;
-}
-
-
-/* */
-
 
 
 
