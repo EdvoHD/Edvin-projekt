@@ -23,7 +23,12 @@
           </div>
 
           <div class="box1-content2">
-            <div class="reminder">
+            <div class="time-icon-box">
+              <a href="#"><i class="fas fa-stopwatch"></i></a>
+              <a href="#"><i class="fas fa-clock"></i></a>
+              <a href="#"><i class="fas fa-calendar-alt"></i></a>
+            </div>
+          <!-- <div class="reminder">
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
@@ -31,7 +36,7 @@
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
               <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
-              </div>
+            </div> -->
           </div>
         </div> <!-- </> gridbox-1 -->
 
@@ -41,14 +46,29 @@
             <div class="weather-box">
 
               <div class="weather-now">
-                <p id="w-location">plats</p>
+                <p id="w-location">Alvik, Sweden</p>
                 <h2>15°C</h2>
-                <i class="icon-size-large wi wi-night-sleet"></i>
-
+                <i class="icon-size-large wi wi-day-sunny"></i>
               </div>
+
               <div class="weather-day">
-
+                <div class="w-card w-today">
+                   <h4>idag</h4>
+                   <i class="icon-size-small wi wi-day-sunny"></i>
+                   <p>15°C</p>
+                 </div>
+                <div class="w-card w-tomorrow">
+                   <h4>imorgon</h4>
+                   <i class="icon-size-small wi wi-cloud"></i>
+                   <p>15°C</p>
+                 </div>
+                <div class="w-card w-day-3">
+                   <h4>om 2 dagar</h4>
+                   <i class="icon-size-small wi wi-day-cloudy"></i>
+                   <p>15°C</p>
+                 </div>
               </div>
+
             </div>
           </div>
 
@@ -59,7 +79,7 @@
 
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
+    <script src="darkskyjs.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

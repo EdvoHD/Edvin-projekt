@@ -9,6 +9,7 @@ html, body{
   background-color: #ffffff;
 }
 
+
 /* Färg schema
 #ffffff
 #0ca7d2
@@ -49,7 +50,7 @@ font-family 'Roboto' sans-serif;
   grid-area: gridbox-1;
   background-color: #0ca7d2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .gridbox-2 {
@@ -66,17 +67,17 @@ font-family 'Roboto' sans-serif;
 
 .box1-content1 {
   padding-top: 10px;
-  min-height: 160px;
+  padding-bottom: 10px;
 }
 
 .time {
-  font-size: 3em;
+  font-size: 3.5em;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .date {
   color: #034d61;
-  font-size: 1.15em;
+  font-size: 1.2em;
   margin: 0;
   text-transform: uppercase;
 }
@@ -107,13 +108,31 @@ font-family 'Roboto' sans-serif;
 
 .reminder {
   line-height: 20px;
-  max-height: 160px;
+  max-height: 120px;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   list-style-type: none;
   font-size: 1em;
   text-align: center;
+}
+
+.time-icon-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 5px;
+}
+
+.time-icon-box a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s;
+  margin: 0 auto;
+  font-size: 1.8em;
+}
+
+.time-icon-box a:active {
+  font-size: 1.6em;
 }
 
 .reminder li {
@@ -150,55 +169,73 @@ font-family 'Roboto' sans-serif;
 
 .box2-content {
   display: grid;
-  border:1px solid red;
   min-height: 240px;
+  color: #fff;
 }
 
 .weather-box {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 50px;
-  background-color: #0ca7d2;
+  background: #00d8ff;
+  background: -moz-linear-gradient(-45deg, #00d8ff 0%, #0ca7d2 21%, #0ca7d2 32%, #0785a9 54%, #067494 76%, #035a73 100%);
+  background: -webkit-linear-gradient(-45deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
+  background: linear-gradient(135deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d8ff', endColorstr='#035a73',GradientType=1 );
 }
 
 .weather-now {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  "w-location w-location"
-  "w-temp w-icon";
+  "w-location"
+  "w-icon"
+  "w-temp";
+  grid-gap: 15px;
 }
 
-.weather-now i {grid-area: w-icon;}
+.weather-now i {
+  grid-area: w-icon;
+  text-shadow: 0px 0px 12px #000;
+}
 
 .weather-now p {
   grid-area: w-location;
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
   font-weight: bold;
-    margin: 0;
-
+  margin: 0;
+  padding-top: 5px;
 }
 .weather-now h2 {
   grid-area: w-temp;
   font-size: 3em;
   margin: 0;
+
 }
 
 .weather-day {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
   background-color: #035a73;
-  margin: 0 auto;
-  width: 100%;
-  opacity: 0.9;
+  padding: 5px;
+  grid-gap: 5px;
 }
 
-.weather-day li {
-  display: inline-block;
+.w-card {
+  background-color: #0ca7d2;
+  border-radius: 5px;
 }
 
-.icon-size-small {font-size: 1.2em;}
-.icon-size-medium {font-size: 1.5em;}
+.w-today {
+
+}
+
+.w-card i {text-shadow: 0px 0px 1px #000;}
+
+.icon-size-small {font-size: 1.8em;}
+.icon-size-medium {font-size: 2.5em;}
 .icon-size-large {font-size: 4em;}
 
 /* */
@@ -210,6 +247,7 @@ font-family 'Roboto' sans-serif;
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
+    display: none;
 }
 
 /* Track */
