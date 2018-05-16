@@ -19,6 +19,15 @@ html, body{
 #034d61
 */
 
+/*
+background: #00d8ff;
+background: -moz-linear-gradient(-45deg, #00d8ff 0%, #0ca7d2 21%, #0ca7d2 32%, #0785a9 54%, #067494 76%, #035a73 100%);
+background: -webkit-linear-gradient(-45deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
+background: linear-gradient(135deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d8ff', endColorstr='#035a73',GradientType=1 );
+
+*/
+
 /* FONTS
 font-family: 'Gugi', cursive;
 font-family: 'Black Han Sans', sans-serif;
@@ -60,7 +69,7 @@ font-family 'Roboto' sans-serif;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   grid-gap: 5px;
-  border-top: 8px solid #034d61;
+  border-top: 15px solid #035a73;
 }
 
 /* ===== INSIDE gridbox-1 ===== */
@@ -177,12 +186,13 @@ font-family 'Roboto' sans-serif;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 50px;
-  background: #00d8ff;
-  background: -moz-linear-gradient(-45deg, #00d8ff 0%, #0ca7d2 21%, #0ca7d2 32%, #0785a9 54%, #067494 76%, #035a73 100%);
-  background: -webkit-linear-gradient(-45deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
-  background: linear-gradient(135deg, #00d8ff 0%,#0ca7d2 21%,#0ca7d2 32%,#0785a9 54%,#067494 76%,#035a73 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00d8ff', endColorstr='#035a73',GradientType=1 );
+  background: linear-gradient(-45deg, #0ca7d2, #51d3d7, #0ca7d2, #51d3d7);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 8s ease infinite;
+	-moz-animation: Gradient 8s ease infinite;
+	animation: Gradient 8s ease infinite;
 }
+
 
 .weather-now {
   display: grid;
@@ -217,15 +227,17 @@ font-family 'Roboto' sans-serif;
 
 .weather-day {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: #035a73;
   padding: 5px;
   grid-gap: 5px;
+  text-transform: capitalize;
 }
 
+/* https://codepen.io/P1N2O/pen/pyBNzX */
+
 .w-card {
-  background-color: #0ca7d2;
-  border-radius: 5px;
+background-color: #0ca7d2;
 }
 
 .w-today {
@@ -263,6 +275,43 @@ font-family 'Roboto' sans-serif;
 }
 /* */
 
+
+/* Gradient */
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
 
 
 

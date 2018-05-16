@@ -30,7 +30,20 @@ $.ajax({
   mode: 'no-cors',
 	dataType: 'jsonp'
 }).done(function(data, textStatus, jqXHR) {
-	console.log('done');
+	console.log(data.currently.temperature);
+
+  //temperature
+  var valNum = data.currently.temperature;
+  var tempCel = (valNum-32) / 1.8;
+  var rounded = Math.round( tempCel * 10 ) / 10;
+  var todayIcon = data.currently.icon;
+
+
+  $("#w-location").append(data.timezone);
+  $("#w-temp-today").append(rounded);
+  $("#w-temp-day1").append(rounded);
+  $("#w-icon-day1").append(todayIcon);
+
 }).fail(function(jqXHR, textStatus, errorThrown) {
 	if (jqXHR.responseJSON) {
 		console.log('failed with json data');
