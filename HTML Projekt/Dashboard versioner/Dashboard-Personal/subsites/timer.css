@@ -1,0 +1,116 @@
+
+/*
+
+https://codepen.io/joshbivens/pen/jAkjzo
+https://codepen.io/joshbivens/pen/jAkjzo
+https://codepen.io/joshbivens/pen/jAkjzo
+https://codepen.io/joshbivens/pen/jAkjzo
+https://codepen.io/joshbivens/pen/jAkjzo
+*/
+
+  body {
+  overflow: hidden;
+  background-color:skyblue;
+  font-family: 'Source Sans Pro', sans-serif;
+  }
+
+.btndiv {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#button {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 120px;
+  font-weight: bold;
+  font-size: 2em;
+  transition: all 0.2s;
+  box-shadow: 0px 1px 1px #262626;
+}
+
+#button:hover {
+  transition-timing-function: ease-in-out;
+  box-shadow: 0px 4px 5px #262626;
+}
+
+.container {
+  font-family: "Roboto";
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.alarm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+}
+
+input {
+  width: 200px;
+  margin-top: 55px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 230px;
+  height: 4px;
+  background: #fff;
+  outline: none;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  transition: all 0.1s ease-in;
+  -webkit-appearance: none;
+          appearance: none;
+  background: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+input[type='range']::-webkit-slider-thumb:active {
+  background: dodgerblue;
+}
+
+.sliders {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  width: 235px;
+  margin-top: 50px;
+  margin-left: -62px;
+}
+
+span {
+  font-size: 4.8em;
+  color: white;
+}
+
+@media only screen and (max-width: 500px) { /* =====DESKTOP===== */
+
+  .container {
+    font-family: "Roboto";
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+  }
+
+  span {
+    font-size: 6em;
+    color: white;
+  }
+}

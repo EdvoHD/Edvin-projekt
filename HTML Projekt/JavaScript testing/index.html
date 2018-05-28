@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu" rel="stylesheet">
+    <title>JavaScript testingsite</title>
+  </head>
+  <body>
+    <div class="spacediv"></div>
+    <div class="machine-skin">
+    <div class="logobox">
+    <button type="button" name="button" onclick="easteregg(4)"><img src="images/sportamorelogo.png" alt="error"></button>
+    </div>
+
+    <div class="hiddendiv" id="TEST">
+    <div class="fancy">
+        <ul class="slot">
+            <!-- In reverse order so the 7s show on load -->
+            <li><span> <img src="https://cdn-media.sportamore.se/uploads/products/887768386153_001_45dcd578f7ad48ae9db663a4c482b27c.jpg" alt="error"> </span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/4059812584242_001_011ea97c17f74c5c8e6e167b842a545d.jpg" alt="error"></span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/7325600006799_001_034198d3910241bd9e30af20655f618a.jpg" alt="error"></span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/8057016943328_001_2e9fbdeb8ce44b29813a029bf2107017.jpg" alt="error"></span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/886550276016_001_a6d3aa7e519d4f44a65f340c9571442f.jpg" alt="error"></span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/886745753346_001_0d9bbcfae25545fb86ce50f9f471d41c.jpg" alt="error"></span></li>
+            <li><span><img src="https://cdn-media.sportamore.se/uploads/products/191169572580_001_1b119ee8ce1049d0b99c893091d78ec3.jpg" alt="error"></span></li>
+        </ul>
+        <div class="spacediv"></div>
+
+        <input class="btn" type="button" id="playFancy" value="Play">
+        <div class="spacediv"></div>
+        <button type="button" class="close-win" onclick="myFunction2()"><i class="fas fa-times"></i> Stäng fönster</button>
+    </div> <!-- //// fancy -->
+  </div> <!-- //// hiddendiv -->
+  </div> <!-- //// Machine-skin -->
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script> //Display div
+    var antalclick = 0;
+
+    function easteregg(antal)
+    {
+    	antalclick++;
+    	if(antalclick > antal)
+    	{
+    		document.getElementById("TEST").style.opacity = "1";
+    	}
+    }
+    </script>
+
+    <script> // hide div
+    function myFunction2() {
+      document.getElementById("TEST").style.opacity = "0";
+    }
+    </script>
+
+
+    <script type="text/javascript" charset="utf-8"> // fancy winning
+        $('.fancy .slot').jSlots({
+            number : 7,
+            winnerNumber : 1,
+            spinner : '#playFancy',
+            easing : 'easeOutSine',
+            time : 7000,
+            loops : 6,
+            onStart : function() {
+                $('.slot').removeClass('winner');
+            },
+            onWin : function(winCount, winners) {
+                // only fires if you win
+
+                $.each(winners, function() {
+                    this.addClass('winner');
+                });
+
+                // react to the # of winning slots
+                if ( winCount === 1 ) {
+                    //alert('You got ' + winCount + ' 7!!!');
+                } else if ( winCount > 1 ) {
+                    //alert('You got ' + winCount + ' 7’s!!!');
+                }
+
+            }
+        });
+
+
+    </script>
+
+  </body>
+</html>

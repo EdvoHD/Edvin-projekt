@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu|Source+Sans+Pro" rel="stylesheet">
+    <title>DASHBOARD-PERSONAL</title>
+  </head>
+  <body onload="startTime()">
+
+    <div class="wrapper">
+
+        <div class="gridbox-1">
+
+          <div class="box1-content1">
+            <div class="time bold" id="time"></div>
+            <div class="date bold" id="date"></div>
+          </div>
+
+          <div class="box1-content2">
+            <div class="time-icon-box">
+              <a href="#"><i class="fas fa-stopwatch"></i></a>
+              <a href="subsites/timer.html"><i class="fas fa-clock"></i></a>
+              <a href="#"><i class="fas fa-calendar-alt"></i></a>
+            </div>
+          <!-- <div class="reminder">
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+              <li><i class="far fa-circle"></i> <p>Kom-ihåg</p></li>
+            </div> -->
+          </div>
+        </div> <!-- </> gridbox-1 -->
+
+        <div class="gridbox-2">
+
+          <div class="box2-content">
+            <div class="weather-box">
+
+              <div class="weather-now">
+                <p id="w-location"></p>
+                <h2 id="w-temp-today"></h2>
+                <i class="icon-size-large wi wi-day-sunny"></i>
+              </div>
+
+              <div class="weather-day">
+                <div class="w-card w-day-1">
+                   <h4>imorgon</h4>
+                   <i id="w-icon-day1" class="icon-size-small"></i>
+                   <p id="w-temp-day1"></p>
+                 </div>
+                <div class="w-card w-day-2">
+                   <h4>om 2 dagar</h4>
+                   <i id="w-icon-day2" class="icon-size-small wi wi-cloud"></i>
+                   <p id="w-temp-day2">°C</p>
+                 </div>
+                <div class="w-card w-day-3">
+                   <h4>om 3 dagar</h4>
+                   <i id="w-icon-day3" class="icon-size-small wi wi-day-cloudy"></i>
+                   <p id="w-temp-day3">°C</p>
+                 </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="box2-content">2</div>
+          <div class="box2-content">3</div>
+          <div class="box2-content">4</div>
+        </div> <!-- </> grid-box-2 -->
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="darkskyjs.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

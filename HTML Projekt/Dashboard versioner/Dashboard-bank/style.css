@@ -1,0 +1,320 @@
+/* BANK - DASHBOARD */
+
+/* Färg schema för sidan
+#c9c9c9
+#e3e3e3
+#9ad3de
+#89bdd3
+*/
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #e3e3e3;
+/*  overflow: hidden; */
+}
+/*
+font-family: 'Gugi', cursive;
+font-family: 'Black Han Sans', sans-serif;
+*/
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header header"
+  "sidebar dashboard dashboard"
+  "sidebar dashboard dashboard"
+  "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1.5fr 3fr 1fr;
+  grid-template-rows: auto;
+  background-color: #fff;  /* 45A29E */
+
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 12vh 12vh 12vh;
+  background-color: #9ad3de;
+}
+
+.dashboard {
+  grid-area: dashboard;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 5vh;
+  grid-template-areas:
+  "dash-head dash-head . "
+  " . accounts .         "
+  " . expenditures .     ";
+  background-color: #e3e3e3;
+}
+
+.footer {
+  grid-area: footer;
+  background: #fff;
+  min-height: 50px;
+}
+
+
+/* == Inside .HEADER == */
+
+.header {
+  padding: 5px;
+}
+
+.header h2 {
+  font-size: 2em;
+  padding-left: 15px;
+}
+
+.header form {
+  padding-top: 4vh;
+  margin: 0 auto;
+}
+.header input {
+  width: 20vw;
+  min-height: 2vh;
+  border-radius: 5px;
+  border: solid 2px #e3e3e3;
+  padding: 5px;
+}
+
+.header button {
+  padding: 5px;
+  border: none;
+  background-color: #c9c9c9;
+  box-shadow: 2px 4px 2px #262626;
+  width: 2.1vw;
+  height: auto;
+  border-radius: 10%;
+}
+
+
+.profile-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: center;
+}
+
+.header-profile button {
+  background: none;
+  min-width: 20px;
+  height: 20px;
+  margin: 0 auto;
+}
+/* <///> .HEADER <///> */
+
+
+
+
+/* == Inside .SIDEBAR == */
+.sidebar {
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-weight: normal;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.sidebar ul {
+  padding: 5px;
+}
+
+.sidebar li {
+  background: #fff;
+  list-style-type: none;
+  padding: 25px;
+  box-shadow: 0px 2px 3px #262626;
+  font-size: 1em;
+}
+
+.sidebar li:hover {
+  box-shadow: 5px 1px 1px #262626;
+}
+
+.sidebar-nav {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.sidebar-nav a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #262626;
+}
+
+/* <///> .SIDEBAR <///> */
+
+
+
+
+
+/* == Inside .DASHBOARD == */
+.dashboard {
+  grid-gap: 40px;
+  padding: 25px;
+}
+
+.dashboard h2 {
+  grid-area: dash-head;
+  padding: 15px;
+}
+
+.welcome-name {
+  color: white;
+  font-size: 1em;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.accounts, .expenditures {
+  background-color: inherit;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin-top: 5%; /* om inte title / välkomsttext finns */
+}
+
+.accounts {
+  grid-area: accounts;
+}
+
+.expenditures {
+  grid-area: expenditures;
+}
+
+.accounts-box, .expenditures-box {
+  background-color: #9ad3de;
+  border-radius: 25px;
+  padding-bottom: 40px;
+}
+
+.accounts-box {
+  text-align: center;
+  width: 500px;
+}
+
+.accounts-box div {
+  padding: 15px;
+}
+
+.accounts-box h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.accounts-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 0 auto;
+  grid-gap: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #89bdd3;
+  border-top: 4px solid grey;
+  border-bottom: 4px solid grey;
+}
+
+.accounts-item {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 0px 2px #262626;
+}
+
+.accounts-item h4 {text-align: center;}
+.accounts-item h5 {text-align: center;}
+
+.expenditures-box {
+  display: grid;
+  grid-template-columns:2fr 1.5fr;
+  grid-template-rows: auto; /* ? */
+  grid-template-areas:
+  "expend-chart expend-text"
+  "expendchart      .      ";
+  grid-gap: 18px;
+  padding: 25px;
+  /* https://codepen.io/rupok/pen/OPBxVB */
+}
+
+.expend-chart {
+  grid-area: expend-chart;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 12px;
+}
+
+/* Expend chart styling */
+.bar { /* style på bars */
+  background: red;
+  }
+/* */
+
+.expend-text {
+  grid-area: expend-text;
+  font-size: 0.8em;
+}
+
+.expend-text li {
+  list-style-type: none;
+}
+
+.expend-text h2 {
+  margin: 0;
+  text-align: center;
+}
+.expend-text hr {
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+
+/* <///> .DASHBOARD <///> */
+
+
+/* =====Scrollbar===== */
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px none;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darkgrey;
+}
+/* <///> Scrollbar <////> */

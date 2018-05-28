@@ -1,0 +1,15 @@
+/* MAIN CSS FIL FÖR */
+/* UF FÖRETAG */
+
+html, body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  /*font-family: 'Roboto', sans-serif; */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+
+}

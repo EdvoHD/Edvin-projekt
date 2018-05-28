@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Ubuntu|Source+Sans+Pro|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>Bank Dashboard</title>
+  </head>
+  <body>
+
+    <div class="wrapper"> <!-- WRAPPER -->
+
+      <div class="header"> <!-- HEADER -->
+        <h2>Företagsnamn</h2>
+        <form action="index.html" method="post">
+          <input type="text" placeholder="Sök.." name="search">
+          <button type="submit"> <i class="fas fa-search"></i> </button>
+        </form>
+
+            <div class="profile-box">
+                <i class="fas fa-user"></i>
+                <h3>Edvin Aginger <button type="button"><i class="fas fa-angle-down"></i></button></h3>
+            </div>
+
+      </div> <!--</> HEADER -->
+
+      <div class="sidebar"> <!-- SIDEBAR -->
+        <h2 id="Total-summa">Total summa</h2>
+        <h2>Antal överförningar <br> senaste 30 dagar</h2>
+        <div class="sidebar-nav">
+          <ul>
+            <a href="#"><li> <i class="fas fa-eye"></i> Översikt</li></a>
+            <a href="#"><li> <i class="fas fa-exchange-alt"></i> Transaktioner</li></a>
+            <a href="#"><li> <i class="fas fa-cog"></i> Inställningar</li></a>
+          </ul>
+        </div>
+
+
+      </div> <!-- </> SIDEBAR -->
+
+      <div class="dashboard"> <!-- DASHBOARD -->
+        <h2>Välkommen tillbaka <br> <span class="welcome-name"> Edvin Aginger</span></h2>
+        <div class="accounts"> <!-- accounts -->
+          <div class="accounts-box">
+            <div><h2>Konton</h2></div>
+            <div class="accounts-list">
+              <div class="accounts-item"> <h4>privatkonto</h4> <h5>5530kr</h5> </div>
+              <div class="accounts-item"> <h4>sparkonto</h4> <h5>62560kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+              <div class="accounts-item"> <h4>Kontonamn</h4> <h5>0kr</h5> </div>
+            </div>
+          </div>
+        </div> <!-- </> accounts -->
+
+
+        <div class="expenditures"> <!-- expenditures -->
+          <div class="expenditures-box"> <!-- expenditures-box-->
+            <div class="expend-chart">
+              <!-- KOLLA CV sidan hur horizontella fungerade -->
+                <div class="bar" style="margin-top:150px;">1</div>
+                <div class="bar" style="margin-top:70px; background:blue;">2</div>
+                <div class="bar" style="margin-top:30px; background:green;">3</div>
+
+            </div><!-- </> expend-chart -->
+
+            <div class="expend-text">
+              <h2>Utgifter</h2>
+              <hr>
+              <p><i class="fas fa-dot-circle"></i> Mat </p>
+              <p><i class="fas fa-dot-circle"></i> Nöjen </p>
+              <p><i class="fas fa-dot-circle"></i> 3 </p>
+            </div>
+
+          </div><!--</> expenditures-box-->
+        </div> <!-- </> expenditures -->
+
+
+
+      </div> <!-- </> DASHBOARD -->
+
+      <div class="footer">
+        footer
+      </div>
+
+
+    </div> <!-- </> WRAPPER -->
+  </body>
+</html>

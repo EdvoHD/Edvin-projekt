@@ -1,0 +1,189 @@
+/* JavaScript Testingsite CSS */
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+
+}
+
+*:focus{
+  outline: none;
+}
+
+/* FONTS
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+.machine-skin {
+  background: pink;
+  padding: 30px;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 50px;
+  overflow: hidden;
+  position: relative;
+  min-height: 450px;
+  box-shadow: 2px 6px 4px #3e3e3e;
+}
+
+
+
+.hiddendiv {
+  opacity: 0;
+
+}
+
+
+
+.fancy img {
+  width: 100px;
+  height: auto;
+}
+
+.logobox {
+  z-index: 5;
+}
+
+.logobox img {
+  width: 500px;
+  height: auto;
+}
+
+.logobox img:hover {
+  cursor: pointer;
+}
+
+.logobox button {
+  background-color: inherit;
+  border: none;
+}
+
+.spacediv {
+  padding: 15px;
+}
+
+.btn {
+  background-color: #3e3e3e;
+  color: white;
+  font-size: 48px;
+  border: none;
+  padding: 8px 18px;
+  transition: all 0.2s;
+  box-shadow: 3px 5px 6px #262626;
+
+
+}
+
+.btn:active {
+  font-size: 42px;
+}
+
+.close-win {
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  color: #262626;
+  font-size: 18px;
+  background-color: inherit;
+  transition: all 0.2s;
+
+}
+
+.close-win:active {
+  font-size: 16px;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jSlots-wrapper {
+    overflow: hidden;
+    height: 20px;
+    display: inline-block; /* to size correctly, can use float too, or width*/
+    border: 1px solid #999;
+}
+
+.slot {
+    float: left;
+}
+
+
+
+/* ---------------------------------------------------------------------
+   FANCY EXAMPLE
+--------------------------------------------------------------------- */
+.fancy .jSlots-wrapper {
+    overflow: hidden;
+    height: 90px;
+    display: inline-block; /* to size correctly, can use float too, or width*/
+    border: 2px solid #999;
+    box-shadow: 0px 2px 5px #3e3e3e;
+}
+
+.fancy .slot li {
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+    font-family: 'Gravitas One', serif;
+    border-left: 1px solid #999;
+}
+
+.fancy .slot:first-child li {
+    border-left: none;
+}
+
+.fancy .slot li:nth-child(7) {
+    background-color: #fff;
+}
+.fancy .slot li:nth-child(6) {
+    background-color: #fffB;
+}
+.fancy .slot li:nth-child(5) {
+    background-color: #fff;
+}
+.fancy .slot li:nth-child(4) {
+    background-color: #fff;
+}
+.fancy .slot li:nth-child(3) {
+    background-color: #fff;
+}
+.fancy .slot li:nth-child(2) {
+    background-color: #fff;
+}
+.fancy .slot li:nth-child(1),
+.fancy .slot li:nth-child(8) {
+    background-color: #fff;
+}
+
+.fancy .slot li span {
+    display: block;
+}
+
+
+.winner li {
+    -webkit-animation: winnerBox 2s infinite linear;
+       -moz-animation: winnerBox 2s infinite linear;
+        -ms-animation: winnerBox 2s infinite linear;
+}
+.winner li span {
+     -webkit-animation: winner 2s infinite linear;
+        -moz-animation: winner 2s infinite linear;
+         -ms-animation: winner 2s infinite linear;
+}

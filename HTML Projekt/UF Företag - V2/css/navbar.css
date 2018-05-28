@@ -1,0 +1,15 @@
+
+#navbar {
+  background-color: lightgrey;
+  border-bottom: 3px solid #262626;
+}
+
+#navbar ul {
+  list-style-type: none;
+  display: inline-flex;
+}
+
+#navbar li {
+  padding: 4px 8px 4px 8px;
+  border: solid 1px #262626;
+}
