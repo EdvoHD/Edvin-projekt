@@ -9,20 +9,92 @@ html, body {
   /*font-family: 'Roboto', sans-serif; */
   font-family: 'Source Sans Pro', sans-serif;
   background-color: lightgrey;
+  color: #262626;
 }
 
 .wrapper {
   margin: 0 auto;
   width: 90%;
   background-color: #fff;
-  min-height: 1200px;
 }
 
 /* For the document-page effect */
 .wrapper-document {
+  display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
-  background-color: #fff;
-  min-height: 1200px;
+  background-color: inherit;
+  min-height: 1200px; /* TA BORT */
   margin-top: 50px;
+  margin-bottom: 50px;
   box-shadow: 0px 0px 32px #262626;
 }
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* tredje för whitespace; */
+  padding: 0px 25px 0 25px;
+}
+
+.main-content .main-banner {
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: 0px 2px 5px #3e3e3e;
+}
+
+.main-content hr {
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.main-content .main-context {
+  text-align: center;
+}
+
+.main-context h1 {
+  font-size: 3.2em;
+}
+
+.main-context p {
+  font-size: 1.5em;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5px 0 5px 0;
+}
+
+/* start flexslider */
+
+/* end flexslider */
+
+
+
+/* start .about */
+.main-about {
+  text-align: center;
+}
+
+.main-about h1 {
+  font-size: 3.2em;
+}
+
+.main-about p {
+  font-size: 1.5em;
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px 0 5px 0;
+}
+/* end .about */
+
+
+/* start .footer */
+.footer {
+  background-color: #262626;
+  color: #fff;
+}
+/* end .footer */
