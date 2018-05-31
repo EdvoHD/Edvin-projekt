@@ -58,9 +58,10 @@
       </div>
       <!-- end navbar -->
     </header>
+
       <!-- start wrapper -->
-    <div class="wrapper">
-      <div class="wrapper-document">
+    <main class="main-wrapper">
+      <div class="main-wrapper-document">
         <div class="main-content">
             <div id="main-banner" class="main-banner"> <!-- id för att navigera via js och klick för att ta sig till toppen -->
               <img src="../images/tg-banner.png" alt="tgbanner">
@@ -68,33 +69,57 @@
             <div class="main-context">
                 <h1>Tumba Gymnasium</h1>
                 <hr />
-                  <p>Välkommen till Ekonomiklassens webbshop för sina produkter som tagits fram via sina UF företag</p>
+                  <p>Välkommen till Ekonomiklassens webbshop. Här kan du hitta årets produkter som eleverna i årskurs-3 har tagit fram.</p>
+                  <h4 class="main-comment">Skapad av T4-klassen</h4>
                 <hr />
+
+
             </div>
             <div class="whitespace"></div>
         </div>
 
         <div class="main-slider">
-            <!-- flexslider här -->
-            main-slider
+          <!--Flexslidern -->
+        <div class="slider-div-home "> <!-- Gör en div som visar vart slidern ska vara -->
+        <div class="flexslider">
+          <ul class="slides slider-border">
+            <li data-thumb="../images/jungle1.jpg">
+              <img src="../images/jungle1.jpg" />
+            </li>
+            <li data-thumb="../images/winter1.jpg" data-scale="1.1">
+              <img src="../images/winter1.jpg" />
+            </li>
+            <li data-thumb="../images/city1.jpg">
+              <img src="../images/city1.jpg" />
+            </li>
+            <li data-thumb="../images/farm1.jpg">
+              <img src="../images/farm1.jpg" />
+            </li>
+            <li data-thumb="../images/slide1.jpg">
+              <img src="../images/slide1.jpg" />
+            </li>
+          </ul>
+        </div>
+      </div>
         </div>
 
         <div class="main-about">
           <h1>om oss</h1>
-          <p>Vi på Tumba gymnasium ville skapa ett sätt att kunna sälja våra UF företags produkter på ett bra och simpelt sätt.
-              shono
+          <p>Vi på Tumba gymnasium ville skapa ett sätt att kunna sälja våra UF företags produkter på ett bra och simpelt sätt. I samarbete med T4-klassen så kom denna sida fram.
         </div>
 
         <div class="footer">
-          FOOTER
+          <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
         </div>
 
       </div>
-    </div>
+    </main>
     <!-- end wrapper -->
 
     <!-- ==SCRIPT REF'S== -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="../js/jquery.flexslider.js"></script>
     <script src="../js/ufcompany.js"></script>
     <script src="../js/navbar.js"></script>

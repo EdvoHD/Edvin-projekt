@@ -12,19 +12,20 @@ html, body {
   color: #262626;
 }
 
-.wrapper {
+/* start main-wrapper */
+.main-wrapper {
   margin: 0 auto;
   width: 90%;
   background-color: #fff;
 }
 
 /* For the document-page effect */
-.wrapper-document {
+.main-wrapper-document {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%;
+  grid-template-rows: auto auto auto 0.2fr;
   background-color: inherit;
-  min-height: 1200px; /* TA BORT */
   margin-top: 50px;
   margin-bottom: 50px;
   box-shadow: 0px 0px 32px #262626;
@@ -34,9 +35,6 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* tredje för whitespace; */
   padding: 0px 25px 0 25px;
-}
-
-.main-content .main-banner {
 }
 
 .main-banner img {
@@ -68,8 +66,22 @@ html, body {
   padding: 5px 0 5px 0;
 }
 
-/* start flexslider */
+.main-comment {
+  opacity: 0.2;
+  padding: 12px 0 12px 0;
+}
+/* end main-wrapper */
 
+
+
+
+/* start flexslider */
+.slider-div-home{
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2%;
+}
 /* end flexslider */
 
 
@@ -85,7 +97,7 @@ html, body {
 
 .main-about p {
   font-size: 1.5em;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   padding: 5px 0 5px 0;
 }
@@ -96,5 +108,45 @@ html, body {
 .footer {
   background-color: #262626;
   color: #fff;
+  margin-top: 2%;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  padding: 25px;
+}
+
+.footer-social a {
+  color: #fff;
 }
 /* end .footer */
+
+
+
+/* start SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #3e3e3e;
+    opacity: 0.8;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #262626; 
+}
+
+
+/* end SCROLLBAR */
