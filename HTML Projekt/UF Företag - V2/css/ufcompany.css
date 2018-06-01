@@ -17,6 +17,8 @@ html, body {
   margin: 0 auto;
   width: 90%;
   background-color: #fff;
+  border-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 /* For the document-page effect */
@@ -24,17 +26,19 @@ html, body {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto 0.2fr;
+  grid-template-rows: auto;
   background-color: inherit;
   margin-top: 50px;
-  margin-bottom: 50px;
   box-shadow: 0px 0px 32px #262626;
+  border-radius: 24px;
+  border-top-right-radius: 24px;
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr; /* tredje för whitespace; */
   padding: 0px 25px 0 25px;
+
 }
 
 .main-banner img {
@@ -89,6 +93,7 @@ html, body {
 /* start .about */
 .main-about {
   text-align: center;
+  margin-bottom: 3%;
 }
 
 .main-about h1 {
@@ -104,22 +109,121 @@ html, body {
 /* end .about */
 
 
+
+
+/* start .cards */
+.main-cards {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+  color: #262626;
+  margin-bottom: 5%;
+}
+
+.cards-wrapper {
+  /*
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  */
+}
+
+.card {
+  float: left;
+  width: 31%;
+  height:auto;
+  margin-left: 1%;
+  margin-right: 1%;
+  box-shadow: 0px 0px 5px #262626;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+/* Håll liknande storlekar på alla bilder för symmetriska boxar.
+  T.ex alla har runt
+  400x400 till 600x600
+  eller alla har mellan
+  1920x1080 till 1300x760 */
+.card-img img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background: #262626;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-context {
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 6px 0 12px;
+  z-index: 10;
+}
+/* mq för .main-cards och .card-context p */
+@media screen and (max-width: 1100px) {
+  .main-cards {
+    width: 90%;
+  }
+}
+
+.card-context h2 {
+  font-size: 1.5em;
+}
+
+.card-context p {
+  font-size: 1em;
+  padding-bottom: 8px;
+  line-height:normal;
+
+}
+/* end .cards */
+
+
+
+
 /* start .footer */
 .footer {
-  background-color: #262626;
-  color: #fff;
-  margin-top: 2%;
+  color: #262626;
+/*  box-shadow: 0px 4px 24px #262626; */
+}
+
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
 }
 
 .footer-social {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   font-size: 2em;
   padding: 25px;
 }
 
 .footer-social a {
-  color: #fff;
+  color: #262626;
+}
+
+.footer-social p {
+  padding: 0;
+  margin:0;
+  font-size: 0.45em;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+.footer-info {
+}
+
+.footer img {
+  width: 30%;
+  height: auto;
 }
 /* end .footer */
 
@@ -133,7 +237,7 @@ html, body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 30px grey;
     border-radius: 2px;
 }
 
@@ -145,7 +249,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #262626; 
+    background: #262626;
 }
 
 
