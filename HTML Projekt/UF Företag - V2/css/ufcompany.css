@@ -12,11 +12,17 @@ html, body {
   color: #262626;
 }
 
+/* ///////////////////////////////////////////////////////////////////
+  ///////////     MAIN.html      ///////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+  */
+
 /* start main-wrapper */
 .main-wrapper {
   margin: 0 auto;
-  width: 90%;
   background-color: #fff;
+  width: 91%;
+  animation: main-width 0.5s ease forwards;
 }
 
 /* For the document-page effect */
@@ -37,8 +43,12 @@ html, body {
 
 }
 
+.main-banner {
+  text-align: center;
+}
+
 .main-banner img {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
@@ -56,11 +66,11 @@ html, body {
 }
 
 .main-context h1 {
-  font-size: 3.2em;
+  font-size: 2.2em;
 }
 
 .main-context p {
-  font-size: 1.5em;
+  font-size: 1em;
   width: 80%;
   margin: 0 auto;
   padding: 5px 0 5px 0;
@@ -179,11 +189,11 @@ html, body {
 }
 
 .card-context h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .card-context p {
-  font-size: 1em;
+  font-size: 0.8em;
   padding-bottom: 8px;
   line-height:normal;
 
@@ -266,14 +276,13 @@ html, body {
     background-color: inherit;
     margin-top: 50px;
     box-shadow: 0px 0px 32px #262626;
-    /* min-height: 1200px; */
     padding-bottom: 5%;
+     min-height: 1000px; /* ENDAST FÖR TESTING- TA BORT */
   }
 
   .product-text {
     text-align: center;
     padding-top: 12px;
-    font-size: 1.4em;
   }
 
   .product-search-filter {
@@ -282,10 +291,10 @@ html, body {
   }
 
   .product-content {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 24px;
   }
@@ -321,7 +330,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: dotted 2px red;
+    /*border: dotted 2px red; */
   }
 
   .product-context h4 {
@@ -337,6 +346,31 @@ html, body {
     border: solid 1.5px #28b30f;
     border-radius: 2px;
   }
+
+
+
+  /* ///////////////////////////////////////////////////////////////////
+    /////////// Company-list.html ///////////////////////////////////
+    /////////////////////////////////////////////////////////////////
+    */
+
+    .company-wrapper {
+      margin: 0 auto;
+      width: 90%;
+      background-color: #fff;
+      animation: company-width 0.5s ease forwards;
+    }
+
+    /* For the document-page effect */
+    .company-wrapper-document {
+      width: 100%;
+      background-color: inherit;
+      margin-top: 50px;
+      box-shadow: 0px 0px 32px #262626;
+      /* min-height: 1200px; */
+      padding-bottom: 5%;
+    }
+
 
 
 
@@ -373,10 +407,19 @@ html, body {
 
 
 /* start KEYFRAMES */
+/*
+@keyframes main-width {
+  100%  {width: 90%;}
+}
+
 @keyframes product-width {
-    0%   {width: 90%;}
     100% {width: 96%;}
 }
+
+@keyframes company-width {
+    100%  {width: 100%;}
+}
+*/
 
 @keyframes bodyFadeIn {
   0%   {opacity: 0;, background-color: white;}

@@ -29,7 +29,7 @@ header {
 }
 
 #navbar a {
-  font-size: 0.95em;
+  font-size: 0.85em;
   color: #262626;
   text-decoration: none;
   font-weight: bold;
@@ -68,5 +68,5 @@ header {
 }
 
 .sticky a {
-  font-size: 0.75em !important;
+  font-size: 0.65em !important;
 }
